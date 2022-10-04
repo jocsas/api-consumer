@@ -57,7 +57,7 @@ export default function Fotos({ match }) {
     } catch (error) {
       setIsLoading(false);
       const status = get(error, 'response.status', 0);
-      const errors = get(error, 'response.data.errors', []);
+     // const errors = get(error, 'response.data.errors', []);
       toast.error('Erro ao enviar foto.');
       if (status === 401) {
         dispatch(actions.loginFailure());
